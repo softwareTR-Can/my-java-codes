@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static int topla(int sayi1, int sayi2){
+
+        int sonuc = sayi1 + sayi2;
+        return sonuc;
+    }
+    public static int cikar(int sayi1, int sayi2){
+
+        int sonuc = sayi1 - sayi2;
+        return sonuc;
+    }
+    public static int carp(int sayi1, int sayi2){
+
+        int sonuc = sayi1 * sayi2;
+        return sonuc;
+    }
+    public static int bol(int sayi1, int sayi2){
+
+        int sonuc = sayi1 / sayi2;
+        return sonuc;
+    }
+    public static int mod(int sayi1, int sayi2){
+
+        int sonuc = sayi1 % sayi2;
+        return sonuc;
+    }
+
+
+    public static void main(String[] args) {
+
+                Scanner scan =new Scanner(System.in);
+
+                int sonuc=0;
+    System.out.println("Yapmak istediğiniz işlemi yazın: (+,-,*,/,%)");
+                String islem = scan.nextLine();
+
+                System.out.println("Birinci sayiyi girin: ");
+                int sayi1 = scan.nextInt();
+                System.out.println("İkinci sayiyi girin: ");
+                int sayi2 = scan.nextInt();
+
+                if(islem.equals("+")){
+
+                    sonuc = topla(sayi1,sayi2);
+                }
+
+                else if(islem.equals("-")){
+
+                    sonuc = cikar(sayi1,sayi2);
+                }
+
+                else if(islem.equals("*")){
+
+                    sonuc = carp(sayi1,sayi2);
+                }
+
+                else if(islem.equals("/")){
+
+                    sonuc = bol(sayi1,sayi2);
+                }
+
+                else if(islem.equals("%")){
+
+                    sonuc = mod(sayi1,sayi2);
+                }
+
+                else{
+
+                    System.out.println("Geçerli olmayan işlem girdiniz");
+                }
+
+                System.out.println("Sonuç: "+sonuc);
+            }
+
+        }
+        
